@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD.Curso", "TDD\TDD.Curso.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD.Curso.Test", "TDD.Curso.Test\TDD.Curso.Test.csproj", "{3AD3CAA8-A343-4AC5-8545-32AD6D61AC82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD.Api", "TDD.Api\TDD.Api.csproj", "{913643C9-91D8-40B1-958F-26712ECC15D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{3AD3CAA8-A343-4AC5-8545-32AD6D61AC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AD3CAA8-A343-4AC5-8545-32AD6D61AC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AD3CAA8-A343-4AC5-8545-32AD6D61AC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913643C9-91D8-40B1-958F-26712ECC15D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913643C9-91D8-40B1-958F-26712ECC15D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913643C9-91D8-40B1-958F-26712ECC15D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913643C9-91D8-40B1-958F-26712ECC15D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

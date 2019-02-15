@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
   <PropertyGroup>
-    <ProjectGuid>{3AD3CAA8-A343-4AC5-8545-32AD6D61AC82}</ProjectGuid>
+    <ProjectGuid>{913643C9-91D8-40B1-958F-26712ECC15D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-    <RootNamespace>TDD.Curso.Test</RootNamespace>
+    <RootNamespace>TDD.Api</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -20,41 +19,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AutenticationTest.cs" />
-    <Compile Include="ClientFactory.cs" />
+    <Compile Include="BootStrap.cs" />
+    <Compile Include="AuthenticationController.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="IAuthenticationProvider.cs" />
+    <Compile Include="BasicAuthProvider.cs" />
+    <Compile Include="ControllerActivator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentAssertions">
-      <HintPath>..\packages\FluentAssertions.5.6.0\lib\net47\FluentAssertions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Http">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.SelfHost">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.SelfHost.5.2.7\lib\net45\System.Web.Http.SelfHost.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TDD.Api\TDD.Api.csproj">
-      <Project>{913643C9-91D8-40B1-958F-26712ECC15D7}</Project>
-      <Name>TDD.Api</Name>
-    </ProjectReference>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
