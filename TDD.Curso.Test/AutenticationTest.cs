@@ -7,6 +7,18 @@ namespace TDD.Curso.Test
 {
     public class AutenticationTest
     {
+        [SetUp]
+        public void SetUp()
+        {
+            new BootStrap().ActivateBDD();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            new BootStrap().DisableBDD();
+        }
+
         [Test]
         public void DebemosRecibirUnaRespuestaExitosa()
         {
