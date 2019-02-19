@@ -29,5 +29,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Doubles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doubles\AccountManager.cs" />
+    <Compile Include="Doubles\UserAccount.cs" />
+    <Compile Include="Doubles\AccountRepository.cs" />
+    <Compile Include="Doubles\IAccountRepository.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,6 +22,8 @@
   <ItemGroup>
     <Compile Include="AutenticationTest.cs" />
     <Compile Include="ClientFactory.cs" />
+    <Compile Include="TestDoublesDemo.cs" />
+    <Compile Include="Doubles\DummyAccountRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Xml" />
@@ -46,6 +48,17 @@
     <Reference Include="System.Web.Http.SelfHost">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.SelfHost.5.2.7\lib\net45\System.Web.Http.SelfHost.dll</HintPath>
     </Reference>
+    <Reference Include="Simple.Data">
+      <HintPath>..\packages\Simple.Data.Core.0.19.0.0\lib\net40\Simple.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data.Ado">
+      <HintPath>..\packages\Simple.Data.Ado.0.19.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data.SqlServer">
+      <HintPath>..\packages\Simple.Data.SqlServer.0.19.0.0\lib\net40\Simple.Data.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -56,6 +69,13 @@
       <Project>{913643C9-91D8-40B1-958F-26712ECC15D7}</Project>
       <Name>TDD.Api</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TDD\TDD.Curso.csproj">
+      <Project>{062818DB-6BF1-4011-AE07-17369528258E}</Project>
+      <Name>TDD.Curso</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Doubles\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

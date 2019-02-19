@@ -1,7 +1,8 @@
-﻿
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using FluentAssertions;
 using System.Net.Http;
+using Simple.Data;
+using System.Configuration;
 
 namespace TDD.Curso.Test
 {
@@ -11,6 +12,11 @@ namespace TDD.Curso.Test
         public void SetUp()
         {
             new BootStrap().ActivateBDD();
+            var conn = ConfigurationManager.ConnectionStrings["Authentication"].ConnectionString;
+            dynamic bd = Database.OpenConnection(conn);
+
+            bd.Users.Insert(UserName: "xtoledano@test.org", Password: "123456789!");
+            bd.Users.Insert(UserName: "user@test.org", Password: "authorizedpass");
         }
 
         [TearDown]

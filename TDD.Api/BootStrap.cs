@@ -68,11 +68,9 @@ public class BootStrap
             conn.Open();
             var deleteDB = @"IF EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = 'AUTHENTICATION')
                              DROP DATABASE [AUTHENTICATION];";
-            using (var cmd = new SqlCommand(deleteDB, conn))
-            {
-                cmd.ExecuteNonQuery();
 
-            }
+            using (var cmd = new SqlCommand(deleteDB, conn))
+                cmd.ExecuteNonQuery();
         }
     }
 
