@@ -3,7 +3,7 @@ using TDD.Doubles;
 
 namespace TDD.Curso.Test
 {
-    public class DummyAccountRepository : IAccountRepository
+    public class FakeAccountRepository : IAccountRepository
     {
         public UserAccount Save(UserAccount userAccount)
         {

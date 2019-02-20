@@ -43,11 +43,6 @@ namespace TDD.Curso.Doubles
 
             return newUserAccount;
         }
-
-        public int RetryNumber()
-        {
-            return retryNumber;
-        }
     }
 }
 
